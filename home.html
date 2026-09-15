@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فیلم‌خانه | منوی اصلی</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="site-header">
+    <button class="menu-button" aria-label="باز کردن مدیریت" onclick="location.href='admin.html'">☰</button>
+    <div class="site-logo">فیلم‌خانه</div>
+  </header>
+
+  <main class="page">
+    <div class="subscription-pill">زمان باقی‌مانده اشتراک: <strong id="timer">01:00:00</strong></div>
+    <section id="movieContainer"></section>
+  </main>
+
+  
+</div>
+<script src="movies-data.js"></script>
+<script src="auth.js"></script>
+<script src="movies.js"></script>
+</body>
+</html>
