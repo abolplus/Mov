@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فیلم‌خانه | ورود</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="site-header">
+    <button class="menu-button" aria-label="باز کردن مدیریت" onclick="location.href='admin.html'">☰</button>
+    <div class="site-logo">MOVIE</div>
+  </header>
+
+  <main class="page access-page">
+    <section class="access-profile">
+      <div class="profile-icon" aria-hidden="true"><span></span></div>
+      <h1>پروفایل کاربر</h1>
+
+      <div class="subscription-status" id="subscriptionStatus">اشتراک فعال نیست</div>
+
+      <div class="code-entry-box">
+        <div class="code-entry-title">محل وارد کردن کد</div>
+        <form id="loginForm" class="code-form">
+          <input id="accessCode" maxlength="10" autocomplete="off" placeholder="کد اشتراک را وارد کنید" required>
+          <button class="btn primary" type="submit">ورود به سایت</button>
+        </form>
+        <div id="loginMessage" class="message hidden"></div>
+      </div>
+    </section>
+  </main>
+
+  
+</div>
+<script src="js/auth.js"></script>
+</body>
+</html>

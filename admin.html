@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فیلم‌خانه | مدیریت</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="site-header"><button class="menu-button" aria-label="باز کردن مدیریت" onclick="location.href='admin.html'">☰</button><div class="site-logo">فیلم‌خانه</div></header>
+
+  <main class="page">
+    <section id="adminLogin" class="card admin-login">
+      <h1>ورود مدیریت</h1>
+      <p class="muted">برای ورود به پنل مدیریت رمز عبور را وارد کنید.</p>
+      <div id="adminMessage" class="message hidden"></div>
+      <form id="adminLoginForm">
+        <label for="adminPassword">رمز مدیریت</label>
+        <input id="adminPassword" type="password" placeholder="رمز عبور" required>
+        <button class="btn primary">ورود به پنل</button>
+      </form>
+    </section>
+
+    <section id="adminPanel" class="hidden">
+      <div class="admin-grid">
+        <section class="card">
+          <h2>ساخت کد اشتراک</h2>
+          <p class="muted">هر کد با اولین ورود کاربر، یک ساعت اعتبار می‌گیرد.</p>
+          <button id="createCode" class="btn primary">ساخت کد جدید</button>
+          <div id="newCode" class="new-code hidden"></div>
+        </section>
+
+        <section class="card">
+          <h2>افزودن فیلم</h2>
+          <form id="movieForm">
+            <label>نام فیلم</label>
+            <input id="movieTitle" required>
+            <label>لینک مستقیم فیلم</label>
+            <input id="movieUrl" type="url" placeholder="https://..." required>
+            <label>توضیحات</label>
+            <textarea id="movieDescription" rows="4"></textarea>
+            <button class="btn primary">افزودن فیلم</button>
+          </form>
+        </section>
+      </div>
+
+      <section class="card admin-list">
+        <div class="list-header"><h2>کدهای ساخته‌شده</h2><button id="logoutAdmin" class="mini danger">خروج</button></div>
+        <div id="codesList"></div>
+      </section>
+
+      <section class="card admin-list">
+        <h2>فیلم‌ها</h2>
+        <div id="moviesList"></div>
+      </section>
+    </section>
+  </main>
+
+  
+</div>
+<script src="data/movies.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
